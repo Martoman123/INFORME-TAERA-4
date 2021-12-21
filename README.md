@@ -9,6 +9,254 @@ Los ejercicios correspondientes ponerlos por debajo de su nombre y conforme los 
 ***CAPITULO N° 7***
 
 Ejercicios Martin (15 primeros impares)
+Identificación de relaciones en serie-paralelo
+
+1. Visualice y trace las siguientes combinaciones en serie-paralelo:
+(a) R1 en serie con la combinación en paralelo de R2 y R3
+(b) R1 en paralelo con la combinación en serie de R2 y R3
+(c) R1 en paralelo con una rama que contiene R2 en serie con una combinación en paralelo de otros cuatro resistores
+
+(a)
+![image](https://user-images.githubusercontent.com/94182617/146942216-845e6ad9-88a9-406c-aab2-ee8258d611d7.png)
+
+(b) 
+![image](https://user-images.githubusercontent.com/94182617/146942229-7ccb0a8e-6670-4dce-b90b-e1729135359b.png)
+
+(c)
+![image](https://user-images.githubusercontent.com/94182617/146942243-39fec593-cc83-40e6-b193-a685f7a7b8d6.png)
+
+
+3. En cada circuito de la figura, identifique las relaciones en serie-paralelo de los resistores vistas desde la fuente.
+![image](https://user-images.githubusercontent.com/94182617/146942268-31c292c8-d107-488e-bae9-24d303fc5413.png)
+
+
+(a) R1 y R4 están en serie con la combinación en paralelo de R2 y R3.
+
+(b) R1 está en serie con la combinación en paralelo de R2, R3 y R4.
+
+(c) La combinación en paralelo de R2 y R3 está en serie con la combinación en paralelo de R4 y R5. Todo esto está en paralelo con R1.
+
+
+5. Trace el diagrama esquemático de la configuración de la tarjeta de circuito impreso mostrada en la figura indicando valores de resistor, e identifique las relaciones en serie-paralelo.
+![image](https://user-images.githubusercontent.com/94182617/146942296-fd64e7f2-9384-4b07-8b39-39be606193b9.png)
+![image](https://user-images.githubusercontent.com/94182617/146942315-a95c3ea0-7711-4224-b411-5263bcbb5bed.png)
+
+
+La combinación en paralelo de R1 en serie con R3 y R2 en serie con R4, está en serie con las resistencias en serie R10, R11, R9, R8, R7, R6 y R5.
+
+
+7. Configure una tarjeta de circuito impreso para el circuito de la figura. La batería tiene que conectarse externa a la tarjeta.
+![image](https://user-images.githubusercontent.com/94182617/146942341-4747e25c-0efa-4444-bc5b-e739bd27a969.png)
+![image](https://user-images.githubusercontent.com/94182617/146942361-7cabdce0-cbf0-41cf-878f-903f50c8ac7b.png)
+
+
+
+
+Análisis de circuitos resistivos en serie-paralelo
+9. Para cada uno de los circuitos mostrados en la figura, determine la resistencia total presentada a la fuente.
+![image](https://user-images.githubusercontent.com/94182617/146942399-b1acc6ab-9c36-4e03-b41d-cf833c12a7e7.png)
+
+
+R2||R3 = R2/n
+R2||R3 = 100/2
+R2||R3 = 50 ohm
+
+R1+R2||R3+R4 = R1 + R2||R3 + R4
+R1+R2||R3+R4 = 56 + 50 + 27
+RT = 133 ohm
+
+(b)
+R2||R3||R4 = 1/(1/R2 + 1/R3 + 1/R4)
+R2||R3||R4 = 1/(1/680 + 1/330 + 1/180)
+R2||R3||R4 = 99.44 ohm
+
+R1+R2||R3||R4 = 680 + 99.44
+RT = 779.44 ohm
+
+(c)
+R2||R3 = R2*R3/R2+R3
+R2||R3 = (6.2)(3.3)/6.2 + 3.3
+R2||R3 = 2.15 kohm
+
+R4||R5 = R4*R5/R4+R5
+R4||R5 = (10)(5.6)/(10 + 5.6)
+R4||R5 = 3.59 kohm
+
+R4||R5 + R2||R3 = 2.15 + 3.59
+R4||R5 + R2||R3 = 5.74kohm
+
+RT = R1||( R4||R5 + R2||R3)
+RT = 1/(1/R1 + 1/(R4||R5 + R2||R3)
+RT = 1/(1/1 + 1/5.74)
+RT = 0.852 kohm
+RT = 852 ohm
+
+
+11. Determine la corriente a través de cada resistor del circuito de la figura; calcule en seguida cada caída de voltaje.
+![image](https://user-images.githubusercontent.com/94182617/146942419-c35460bf-849c-4fc7-b461-8963a0d3adec.png)
+
+
+(a)
+RT = 133 ohm
+
+R2||R3 = 1/(1/R2 + 1/R3)
+R2||R3 = 1/(1/100 + 1/100)
+R2||R3 = 50 ohm
+
+IT = Vs/RT
+IT = 1.5/133
+IT = 0.0113 A
+
+Vn1-n2 = IT * R1
+Vn1-n2 = 0.0113 * 56
+Vn1-n2 = 0.633 V
+
+Vn2-n3 = IT * R2||R3
+Vn2-n3 = 0.0113 * 50
+Vn2-n3 = 0.565 V
+
+Vn3-n4 = IT * R4
+Vn3-n4 = 0.0113 * 27
+Vn3-n4 = 0.305 V
+
+I1 = I4 = 0.0113 A = 11.3 mA
+
+I3 = I4 = Vn2-n3/R2-3 
+I3 = I4 = 0.565/100
+I3 = I4 = 0.0056 A = 5.6 mA
+
+V1 = (R1/RT)*Vs
+V1 = (56/133) * 1.5
+V1 = 0.632 V = 632 mV
+
+V4 = (R4/RT)*Vs
+V4 = (27/133)*1.5
+V4 = 0.305 V = 305 mV
+
+V2 = V3 = (R2||R3/RT)*Vs
+V2 = V3 = (50/133)*1.5
+V2 = V3 = 0.564 V = 564 mV
+
+
+(b)
+RT = 779 ohm
+
+R2||R3||R4 = 1/(1/R2 + 1/R3 + 1/R4)
+R2||R3||R4 = 1/(1/680 + 1/330 + 1/180)
+R2||R3||R4 = 99.43 ohm
+
+IT = Vs/RT
+IT = 3/779
+IT = 0.0038 A
+
+Vn1-n2 = IT * R1
+Vn1-n2 = 0.0038 * 680
+Vn1-n2 = 2.58 V
+
+Vn2-n3 = IT * R2||R3||R4 
+Vn2-n3 = 0.0038 * 99.43
+Vn2-n3 = 0.38 V
+
+I1 = 0.0038 A = 3.8 mA
+
+I2 = Vn2-n3/R2
+I2 = 0.38/680
+I2 = 0.000555 A = 555 microA
+
+I3 = Vn2-n3/R3
+I3 = 0.38/330
+I3 = 0.00115 A = 1.16 mA
+
+I4 = Vn2-n3/R4
+I4 = 0.38/180
+I4 = 0.0021 A = 2.1 mA
+
+V1 = (R1/RT)*Vs
+V1 = (680/779) * 3
+V1 = 2.62 V
+
+V2 = (R2||R3||R4/RT)*Vs
+V2 = V3 = V4 = (99.43/779)*3
+V2 = V3 = V4 = 0.383 V = 383 mV
+
+13. Encuentre RT para todas las combinaciones de los interruptores de la figura.
+![image](https://user-images.githubusercontent.com/94182617/146942522-aca1ec31-eaa0-4193-8980-3501948de135.png)
+ 
+ 
+SW1 cerrado, SW2 abierto: 220 ohm
+SW1 cerrado, SW2 cerrado: 200 ohm
+SW1 abierto, SW2 abierto: 320 ohm
+SW1 abierto, SW2 cerrado: 300 ohm
+
+15. Determine el voltaje en cada nodo con respecto a tierra en la figura.
+
+
+17. En la figura, ¿cómo determinaría el voltaje entre los extremos de R2 por medición sin conectar directamente un medidor entre los extremos del resistor?
+![image](https://user-images.githubusercontent.com/94182617/146942602-39f17763-1982-40e0-9487-8694490559ca.png)
+ 
+ 
+Medir el voltaje en A con respecto a tierra y el voltaje en B con respecto a tierra. La diferencia es VR2.
+
+
+19. Determine la resistencia del circuito mostrado en la figura como se ve desde la fuente de voltaje.
+![image](https://user-images.githubusercontent.com/94182617/146942626-e41c216b-d69e-4663-a602-fbcf805c7825.png)
+ 
+ 
+R1+R2+R3 = 100 + 560 + 56
+R1+R2+R3 = 716 kohm
+
+R5+R6 = 100 + 1000
+R5+R6 = 1100 kohm
+
+RT = 1/(1/(R1+R2+R3) + 1/(R5+R6) + 1/R4)
+RT = 1/(1/716 + 1/1100 + 1/1000)
+RT = 303 kohm
+
+21. 
+(a) Determine el valor de R2 en la figura. 
+(b) Encuentre la potencia en R2.
+![image](https://user-images.githubusercontent.com/94182617/146942669-c77b2d19-1c8f-4d36-a676-28518a720807.png)
+
+
+23. Encuentre la resistencia entre cada uno de los siguientes juegos de nodos mostrados en la figura: AB, BC y CD.
+![image](https://user-images.githubusercontent.com/94182617/146942768-c9cdc9d7-734e-4285-bae0-52110f6266bb.png)
+
+ 
+RAB = 1/(1/(R1+R2) + 1/R3 + 1/R4)
+RAB = 1/(1/6.6 + 1/3.3 + 1/3.3)
+RAB = 1.32 kohm
+
+RBC = 1/(1/(R1+R2) + 1/R3 + 1/R4)
+RBC = 1/(1/6.6 + 1/3.3 + 1/3.3)
+RBC = 1.32 kohm
+
+RCD = 0 ohm
+
+Divisores de voltaje con cargas resistivas
+25. Un divisor de voltaje está compuesto por dos resistores de 56 kohm y una fuente de 15 V. Calcule el voltaje de salida sin carga. ¿Cuál será el voltaje de salida si se conecta un resistor con carga de 1 Mohm a la salida?
+
+VSalida(sin carga) = (R1/R1+R2)*Vs
+VSalida(sin carga) = (56/56+56)*15
+VSalida(sin carga) = 7.5 V
+
+R1||RL = R1*RL/(R1+RL)
+R1||RL = (5.6*10^4)(1*10^6)/(5.6*10^4 + 1*10^6)
+R1||RL = 53030.3 ohm = 53 kohm
+
+VSalida(con carga) = (R1||RL/(R1 + R1||RL) * Vs
+VSalida(con carga) = (53/(56 + 53) * 15
+VSalida(con carga) = 7.29 V
+
+
+27. ¿Cuál de dos cargas, una de 10 kohm y otra de 47 kohm, provocará una disminución más pequeña en el voltaje de salida de un divisor de voltaje dado?
+
+La carga que provocará una disminución más pequeña en el voltaje de salida de un divisor de voltaje es la de 47 ohm ya que entre mayor sea la resistencia menor será el voltaje de salida.
+
+
+
+28. En la figura, determine el voltaje de salida sin carga entre las terminales de salida. Con una carga de 100 kohm conectada de A a B, ¿cuál es el voltaje de salida?
+
+
 
 Ejercicios Jefferson (12 ultimos ejercicios impares)
 
